@@ -1,2 +1,1 @@
-# ashwinjacob.github.io
-Personal Website
+theme: minima
