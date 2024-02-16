@@ -1,0 +1,10 @@
+body {font-family:Palatino, Serif ; font-size: 12pt}
+a {text-decoration: none; }
+li { margin-bottom: 1em; margin-left: -1em; }
+a:link, a:visited {color :#B05F00;}
+h1 {font-weight: normal; text-align : center}
+h2 {color :784123; font-weight: bold;}
+.container { width: 90%; margin : 0 auto;}
+.left { float: left; width : 45%;}
+.right { float: right; width : 45%;}
+.hdr { display: inline; font-size:16px; }
