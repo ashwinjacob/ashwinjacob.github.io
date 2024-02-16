@@ -1,9 +1,9 @@
 body {font-family:Palatino, Serif ; font-size: 12pt}
 a {text-decoration: none; }
 li { margin-bottom: 1em; margin-left: -1em; }
-a:link, a:visited {color :#87befe;}
+a:link, a:visited {color :#4d96ea;}
 h1 {font-weight: normal; text-align : center}
-h2 {color :87befe; font-weight: bold;}
+h2 {color :4d96ea; font-weight: bold;}
 .container { width: 90%; margin : 0 auto;}
 .left { float: left; width : 45%;}
 .right { float: right; width : 45%;}
