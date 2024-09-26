@@ -6,37 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CS6101E - Mathematical Foundations Of Computer Science</title>
     <style>
+        /* Global styles for both desktop and mobile */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Palatino', 'Serif';
+            font-size: 11pt; /* Smaller base font size for desktop */
+            background-color: #f4f4f9;
+            color: #333;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
         }
 
-        h1, h2 {
-            text-align: center;
+        a {
+            text-decoration: none;
+            color: #4d96ea;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
 
         h1 {
-            font-size: 24px;
+            font-weight: normal;
+            text-align: left; /* Left-align the main title */
+            margin-top: 30px;
+            font-size: 1.7em; /* Slightly smaller title for desktop */
             color: #333;
         }
 
         h2 {
-            font-size: 20px;
-            margin-top: 5px;
-            color: #555;
+            color: #4d96ea;
+            font-weight: bold;
+            font-size: 1.4em; /* Adjusted for smaller desktop fonts */
+            margin-top: 20px;
+            margin-bottom: 10px;
+            text-align: left; /* Left-align all subtitles */
         }
 
         p {
-            margin: 10px 0;
+            font-size: 12pt;
+            margin-bottom: 20px;
         }
 
         ul {
-            margin: 10px 0;
-            padding-left: 20px;
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 1em;
         }
 
         table {
@@ -56,11 +74,6 @@
 
         th {
             background-color: #f2f2f2;
-        }
-
-        a {
-            color: #0066cc;
-            text-decoration: none;
         }
 
         .footer {
