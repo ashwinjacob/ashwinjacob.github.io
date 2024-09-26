@@ -1,6 +1,7 @@
+/* Global styles for both desktop and mobile */
 body {
     font-family: 'Palatino', 'Serif';
-    font-size: 12pt;
+    font-size: 11pt; /* Smaller base font size for desktop */
     background-color: #f4f4f9;
     color: #333;
     line-height: 1.6;
@@ -21,20 +22,20 @@ h1 {
     font-weight: normal;
     text-align: center;
     margin-top: 30px;
-    font-size: 2em;
+    font-size: 1.7em; /* Slightly smaller title for desktop */
     color: #333;
 }
 
 h2 {
     color: #4d96ea;
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1.4em; /* Adjusted for smaller desktop fonts */
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
 p {
-    font-size: 14pt;
+    font-size: 12pt;
     margin-bottom: 20px;
 }
 
@@ -68,7 +69,9 @@ img {
     border: thin solid black;
     padding: 5px;
     margin-left: auto;
-    margin-right: 0; /* Align the image to the right */
+    margin-right: 0; /* Align the image to the right on desktop */
+    height: 150px; /* Slightly smaller image for desktop */
+    width: auto;
 }
 
 strong {
@@ -77,6 +80,7 @@ strong {
 
 /* Media Query for smartphones */
 @media (max-width: 768px) {
+    /* Adjust container to become a vertical stack */
     .container {
         flex-direction: column;
         text-align: left; /* Normal left-align text for mobile */
@@ -96,23 +100,24 @@ strong {
     }
 
     p {
-        font-size: 12pt;
+        font-size: 10pt; /* Smaller font for mobile */
     }
 
     .right {
         position: relative;
     }
 
+    /* Move the image to the top right for mobile, just after the title */
     img {
-        width: 100px; /* Smaller image size */
+        width: 80px; /* Smaller image size for mobile */
         height: auto;
         position: absolute;
-        top: 10px; /* Place at the top right */
-        right: 10px;
-        margin: 0; /* Remove margins for a cleaner layout */
+        top: 10px;
+        right: 10px; /* Position it to the top-right */
+        margin: 0;
     }
 
     body {
-        font-size: 10pt; /* Smaller body text for smartphones */
+        font-size: 9pt; /* Smaller body text for smartphones */
     }
 }
