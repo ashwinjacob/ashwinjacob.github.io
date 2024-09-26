@@ -61,31 +61,51 @@ li {
 
 .right {
     width: 35%;
+    text-align: center;
 }
 
 img {
     display: block;
     border: thin solid black;
     padding: 5px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 20px auto;
 }
 
 strong {
     font-weight: bold;
 }
 
+/* Media Query for smartphones */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
+        text-align: center;
     }
 
     .left, .right {
         width: 100%;
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    p {
+        font-size: 12pt;
     }
 
     img {
-        max-width: 100%;
+        width: 100px; /* Smaller image size */
         height: auto;
+        margin-top: 10px;
+    }
+
+    body {
+        font-size: 10pt; /* Smaller body text for smartphones */
     }
 }
