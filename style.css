@@ -6,7 +6,7 @@ body {
     color: #333;
     line-height: 1.6;
     margin: 0;
-    padding: 20px;
+    padding: 20px; /* Padding around the body */
 }
 
 a {
@@ -54,6 +54,8 @@ li {
     display: flex;
     justify-content: space-between;
     padding-top: 20px;
+    padding-left: 20px; /* Added padding to left for margin space */
+    padding-right: 20px; /* Added padding to right for balance */
 }
 
 .left {
@@ -84,6 +86,8 @@ strong {
     .container {
         flex-direction: column;
         text-align: left; /* Normal left-align text for mobile */
+        padding-left: 10px; /* Less padding for mobile */
+        padding-right: 10px; /* Less padding for mobile */
     }
 
     .left, .right {
