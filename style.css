@@ -1,7 +1,6 @@
-/* Global styles for both desktop and mobile */
 body {
     font-family: 'Palatino', 'Serif';
-    font-size: 11pt; /* Smaller base font size for desktop */
+    font-size: 12pt;
     background-color: #f4f4f9;
     color: #333;
     line-height: 1.6;
@@ -22,20 +21,20 @@ h1 {
     font-weight: normal;
     text-align: center;
     margin-top: 30px;
-    font-size: 1.7em; /* Slightly smaller title for desktop */
+    font-size: 2em;
     color: #333;
 }
 
 h2 {
     color: #4d96ea;
     font-weight: bold;
-    font-size: 1.4em; /* Adjusted for smaller desktop fonts */
+    font-size: 1.5em;
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
 p {
-    font-size: 12pt;
+    font-size: 14pt;
     margin-bottom: 20px;
 }
 
@@ -62,62 +61,31 @@ li {
 
 .right {
     width: 35%;
-    text-align: right; /* Align image to the right */
 }
 
 img {
+    display: block;
     border: thin solid black;
     padding: 5px;
     margin-left: auto;
-    margin-right: 0; /* Align the image to the right on desktop */
-    height: 150px; /* Slightly smaller image for desktop */
-    width: auto;
+    margin-right: auto;
 }
 
 strong {
     font-weight: bold;
 }
 
-/* Media Query for smartphones */
 @media (max-width: 768px) {
-    /* Adjust container to become a vertical stack */
     .container {
         flex-direction: column;
-        text-align: left; /* Normal left-align text for mobile */
     }
 
     .left, .right {
         width: 100%;
-        padding: 0;
     }
 
-    h1 {
-        font-size: 1.5em;
-    }
-
-    h2 {
-        font-size: 1.2em;
-    }
-
-    p {
-        font-size: 10pt; /* Smaller font for mobile */
-    }
-
-    .right {
-        position: relative;
-    }
-
-    /* Move the image to the top right for mobile, just after the title */
     img {
-        width: 80px; /* Smaller image size for mobile */
+        max-width: 100%;
         height: auto;
-        position: absolute;
-        top: 10px;
-        right: 10px; /* Position it to the top-right */
-        margin: 0;
-    }
-
-    body {
-        font-size: 9pt; /* Smaller body text for smartphones */
     }
 }
