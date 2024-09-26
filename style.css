@@ -61,14 +61,14 @@ li {
 
 .right {
     width: 35%;
-    text-align: center;
+    text-align: right; /* Align image to the right */
 }
 
 img {
-    display: block;
     border: thin solid black;
     padding: 5px;
-    margin: 0 auto 20px auto;
+    margin-left: auto;
+    margin-right: 0; /* Align the image to the right */
 }
 
 strong {
@@ -79,7 +79,7 @@ strong {
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
-        text-align: center;
+        text-align: left; /* Normal left-align text for mobile */
     }
 
     .left, .right {
@@ -99,10 +99,17 @@ strong {
         font-size: 12pt;
     }
 
+    .right {
+        position: relative;
+    }
+
     img {
         width: 100px; /* Smaller image size */
         height: auto;
-        margin-top: 10px;
+        position: absolute;
+        top: 10px; /* Place at the top right */
+        right: 10px;
+        margin: 0; /* Remove margins for a cleaner layout */
     }
 
     body {
