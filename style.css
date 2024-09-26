@@ -113,7 +113,7 @@ strong {
 
     /* Move the image to the top right for mobile, just after the title */
     img {
-        width: 80px; /* Smaller image size for mobile */
+        width: 100px; /* Smaller image size for mobile */
         height: auto;
         position: absolute;
         top: 10px;
