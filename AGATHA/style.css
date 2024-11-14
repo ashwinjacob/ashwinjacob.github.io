@@ -54,7 +54,43 @@ section {
     background: #f4f4f4;
     padding: 20px;
     border-radius: 5px;
+    width: 90vw; /* Make the schedule wider */
+    max-width: 100%;
+    margin: 0 auto;
 }
+
+#schedule h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#schedule ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#schedule li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.abstract-link {
+    color: #007bff;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.abstract-content {
+    display: none; /* Hidden by default */
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #555;
+    padding-left: 15px;
+    border-left: 3px solid #007bff;
+}
+
 
 #speakers {
     background: #e7f3fe;
