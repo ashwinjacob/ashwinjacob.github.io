@@ -1,97 +1,127 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Global styles for both desktop and mobile */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Palatino', 'Serif';
+    font-size: 11pt; /* Smaller base font size for desktop */
+    background-color: #f4f4f9;
     color: #333;
     line-height: 1.6;
     margin: 0;
-    padding: 0;
+    padding: 20px; /* Padding around the body */
 }
 
-header {
-    background: #2e3a47;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    background: #f4f4f4;
-    list-style-type: none;
-    padding: 10px;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
+a {
     text-decoration: none;
-    color: #333;
-    font-weight: bold;
+    color: #4d96ea;
 }
 
-section {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
+a:hover {
+    text-decoration: underline;
 }
 
-#overview {
-    background: #e7f3fe;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-#schedule {
-    background: #f4f4f4;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-#speakers {
-    background: #e7f3fe;
-    padding: 20px;
-    border-radius: 5px;
-    width: 95vw; /* Now takes almost the full viewport width */
-    max-width: 100%; /* Ensures no width constraint */
-    margin: 0 auto;
-}
-
-#speakers h3 {
+h1 {
+    font-weight: normal;
     text-align: center;
+    margin-top: 30px;
+    font-size: 2.2em; /* Slightly smaller title for desktop */
+    color: #333;
+}
+
+h2 {
+    color: #4d96ea;
+    font-weight: bold;
+    font-size: 1.4em; /* Adjusted for smaller desktop fonts */
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 12pt;
     margin-bottom: 20px;
 }
 
-.speakers-container {
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 1em;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center; /* Center-aligns the speakers */
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-left: 20px; /* Added padding to left for margin space */
+    padding-right: 20px; /* Added padding to right for balance */
 }
 
-.speaker {
-    flex: 1 1 15%; /* Fits more speakers in a row */
-    max-width: 200px;
-    text-align: center;
+.left {
+    width: 75%; /* Left division now takes 75% */
 }
 
-.speaker img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
+.right {
+    width: 25%; /* Right division now takes 25% */
+    text-align: right; /* Align image to the right */
 }
 
-footer {
-    background: #2e3a47;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin-top: auto;
+img {
+    border: thin solid black;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: 0; /* Align the image to the right on desktop */
+    height: 150px; /* Slightly smaller image for desktop */
+    width: auto;
+}
+
+strong {
+    font-weight: bold;
+}
+
+/* Media Query for smartphones */
+@media (max-width: 768px) {
+    /* Adjust container to become a vertical stack */
+    .container {
+        flex-direction: column;
+        text-align: left; /* Normal left-align text for mobile */
+        padding-left: 10px; /* Less padding for mobile */
+        padding-right: 10px; /* Less padding for mobile */
+    }
+
+    .left, .right {
+        width: 100%;
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    p {
+        font-size: 10pt; /* Smaller font for mobile */
+    }
+
+    .right {
+        position: relative;
+    }
+
+    /* Move the image to the top right for mobile, just after the title */
+    img {
+        width: 100px; /* Smaller image size for mobile */
+        height: auto;
+        position: absolute;
+        top: 10px;
+        right: 10px; /* Position it to the top-right */
+        margin: 0;
+    }
+
+    body {
+        font-size: 9pt; /* Smaller body text for smartphones */
+    }
 }
