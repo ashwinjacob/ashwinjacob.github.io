@@ -89,8 +89,10 @@
             <li>3:15 PM - Panel Discussion: Relevance of Theoretical CS in the Age of AI</li>
         </ul>
     </section>
-    <script>
-    function toggleAbstract(id) {
+    
+   <script>
+    function toggleAbstract(event, id) {
+        event.preventDefault(); // Prevents the default anchor behavior
         const abstract = document.getElementById(id);
         abstract.style.display = (abstract.style.display === 'none' || abstract.style.display === '') ? 'block' : 'none';
     }
