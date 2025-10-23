@@ -168,3 +168,23 @@ footer {
     margin-top: auto;
 }
 
+.toggle-icon {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    font-size: 0.8em;
+}
+
+.toggle-icon.expanded {
+    transform: rotate(90deg);
+}
+
+#teaching-list {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+#teaching-list.show {
+    max-height: 1000px;
+}
+
