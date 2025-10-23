@@ -58,10 +58,13 @@ li {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start; /* align left and right div tops */
+    gap: 20px; /* spacing between left and right */
     padding-top: 20px;
-    padding-left: 20px; /* Added padding to left for margin space */
-    padding-right: 20px; /* Added padding to right for balance */
+    padding-left: 20px;
+    padding-right: 20px;
 }
+
 
 .left {
     width: 75%; /* Left division now takes 75% */
@@ -72,14 +75,13 @@ li {
     text-align: right; /* Align image to the right */
 }
 
-  img {
-    width: 100px;
+ .right img {
+    width: 100%;
+    max-width: 150px; /* optional, controls image size */
     height: auto;
-    position: absolute;
-    top: -50px;
-    right: 10px;
-    margin: 0;
+    border-radius: 5px; /* optional */
 }
+
 
 strong {
     font-weight: bold;
@@ -112,19 +114,15 @@ strong {
         font-size: 10pt; /* Smaller font for mobile */
     }
 
-    .right {
-        position: relative;
-    }
-
-    /* Move the image to the top right for mobile, just after the title */
-  img {
-    width: 100px;
-    height: auto;
-    position: absolute;
-    top: -50px;
-    right: 10px;
-    margin: 0;
+ .right {
+    text-align: center; /* centers the image on mobile */
+    margin-bottom: 20px;
 }
+.right img {
+    max-width: 120px; /* smaller image on mobile */
+    height: auto;
+}
+
 
     body {
         font-size: 9pt; /* Smaller body text for smartphones */
