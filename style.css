@@ -12,12 +12,16 @@ body {
 a {
     text-decoration: none;
     color: #4d96ea;
+    transition: color 0.2s ease;
 }
-
 a:hover {
     text-decoration: underline;
+    color: #3a7bc8;
 }
-
+a:focus {
+    outline: 2px solid #4d96ea;
+    outline-offset: 2px;
+}
 h1 {
     font-weight: normal;
     text-align: center;
@@ -29,9 +33,10 @@ h1 {
 h2 {
     color: #4d96ea;
     font-weight: bold;
-    font-size: 1.4em; /* Adjusted for smaller desktop fonts */
+    font-size: 1.4em;
     margin-top: 20px;
     margin-bottom: 10px;
+    transition: color 0.2s ease;
 }
 
 p {
@@ -144,4 +149,68 @@ strong {
 
 #teaching-list.show {
     max-height: 1000px;
+}
+
+h2.collapsible {
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+h2.collapsible:hover {
+    color: #3a7bc8;
+}
+.toggle-icon {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    font-size: 0.8em;
+}
+.toggle-icon.expanded {
+    transform: rotate(90deg);
+}
+.collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+.collapsible-content.show {
+    max-height: 5000px;
+}
+.pub-item {
+    margin-bottom: 1.5em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #eee;
+}
+.pub-item:last-child {
+    border-bottom: none;
+}
+.pub-year {
+    font-weight: bold;
+    color: #4d96ea;
+    font-size: 1.1em;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+.pub-title {
+    font-weight: bold;
+    color: #333;
+}
+.pub-authors {
+    color: #666;
+    font-size: 0.95em;
+}
+.pub-venue {
+    color: #888;
+    font-style: italic;
+    font-size: 0.9em;
+}
+.pub-type {
+    display: inline-block;
+    background: #e8f4ff;
+    color: #4d96ea;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 0.85em;
+    margin-left: 8px;
 }
