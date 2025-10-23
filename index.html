@@ -52,18 +52,23 @@
                 <li><a href="https://scholar.google.com/citations?user=nyQkLtQAAAAJ&hl=en">Google Scholar</a></li>
             </ul>
 
-            <h2>Teaching</h2>
-            <ul>
-                <li>(July-2025 - Nov 2025) CS3003E Design and Analysis of Algorithms</li>
-                <li>(July-2025 - Nov 2025) CS2001E Data Structures and Algorithms</li>
-                <li>(July-2025 - Nov 2025) CS1092E Program Design Laboratory</li>
-                 <li>(Dec 2024- May 2025) CS1011E Program Design</li>
-                <li>(Dec-2024 - May 2025) CS1092E Program Design Laboratory</li>
-                <li>(Aug-Dec 2024) <a href="mfcs.html">CS6101E Mathematical Foundations of Computer Science</a></li>
-                <li>(Jan-May 2024) CS1011E Program Design</li>
-                <li>(Jan-May 2024) CS1092E Program Design Laboratory</li>
-                <li>(Dec 2015 - May 2016) CS2006 Discrete Structures (as Adhoc Lecturer)</li>
-            </ul>
+          <h2 onclick="toggleList()" style="cursor: pointer; user-select: none;">
+    <span class="toggle-icon" id="toggle-icon">▶</span>
+    Teaching
+</h2>
+<div id="teaching-list">
+    <ul>
+        <li>(July-2025 - Nov 2025) CS3003E Design and Analysis of Algorithms</li>
+        <li>(July-2025 - Nov 2025) CS2001E Data Structures and Algorithms</li>
+        <li>(July-2025 - Nov 2025) CS1092E Program Design Laboratory</li>
+        <li>(Dec 2024- May 2025) CS1011E Program Design</li>
+        <li>(Dec-2024 - May 2025) CS1092E Program Design Laboratory</li>
+        <li>(Aug-Dec 2024) <a href="mfcs.html">CS6101E Mathematical Foundations of Computer Science</a></li>
+        <li>(Jan-May 2024) CS1011E Program Design</li>
+        <li>(Jan-May 2024) CS1092E Program Design Laboratory</li>
+        <li>(Dec 2015 - May 2016) CS2006 Discrete Structures (as Adhoc Lecturer)</li>
+    </ul>
+</div>
 
             <h2>Contact</h2>
             <p><strong>Email:</strong> <a href="mailto:ashwinjacob@nitc.ac.in">ashwinjacob (at) nitc (dot) ac (dot) in</a></p>
@@ -74,6 +79,15 @@
             <img src="images/img_head.jpg" alt="Photo of Ashwin" />
         </div>
     </div>
+    <script>
+function toggleList() {
+    const list = document.getElementById('teaching-list');
+    const icon = document.getElementById('toggle-icon');
+    
+    list.classList.toggle('show');
+    icon.classList.toggle('expanded');
+}
+</script>
 </body>
 
 </html>
