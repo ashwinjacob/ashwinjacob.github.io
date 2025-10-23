@@ -188,22 +188,21 @@
         </div>
     </div>
     <script>
-function toggleList() {
-    const list = document.getElementById('teaching-list');
-    const icon = document.getElementById('toggle-icon');
-    
-    list.classList.toggle('show');
-    icon.classList.toggle('expanded');
-}
-</script>
-    <script>
 function toggleSection(sectionName) {
     const content = document.getElementById(sectionName + '-content');
     const icon = document.getElementById(sectionName + '-icon');
     
     content.classList.toggle('show');
     icon.classList.toggle('expanded');
+
+    // optional: smoothly adjust max-height dynamically
+    if(content.classList.contains('show')){
+        content.style.maxHeight = content.scrollHeight + "px";
+    } else {
+        content.style.maxHeight = "0";
+    }
 }
+
 </script>
 </body>
 
