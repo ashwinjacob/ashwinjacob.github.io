@@ -172,10 +172,12 @@ h2.collapsible:hover {
 .collapsible-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease;
+    transition: max-height 0.5s ease, padding 0.3s ease;
+    padding: 0 0; /* Remove default padding when collapsed */
 }
 .collapsible-content.show {
-    max-height: 5000px;
+    max-height: 5000px; /* large enough to fit content */
+    padding: 10px 0; /* restore padding when expanded */
 }
 .pub-item {
     margin-bottom: 1.5em;
