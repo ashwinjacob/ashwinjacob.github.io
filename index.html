@@ -180,7 +180,20 @@
 </div>
 
             <h2>Contact</h2>
-            <p><strong>Email:</strong> <a href="mailto:ashwinjacob@nitc.ac.in">ashwinjacob (at) nitc (dot) ac (dot) in</a></p>
+            <p><strong>Email:</strong> 
+  <span id="email">
+    <noscript><i>Please enable Javascript to view</i></noscript>
+  </span>
+</p>
+<script src="scramble.js"></script>
+<script>
+var emailScramble = new scrambledString(
+    document.getElementById('email'),
+    'emailScramble',
+    'ashwinjacob@nitc.ac.in',
+    [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23]
+);
+</script>
             <p> If you are interested in working with me as a PhD student, contact me via email.</p>
         </div>
 
