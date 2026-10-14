@@ -1,0 +1,128 @@
+/* Minimal academic website: plain background, text-first layout, ordinary links. */
+:root {
+  color-scheme: light;
+  --text: #242424;
+  --muted: #5b5b5b;
+  --link: #0645ad;
+  --rule: #dedede;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  /* Use the available screen width rather than a narrow centered column. */
+  width: calc(100% - 72px);
+  margin: 30px 36px 24px;
+}
+
+.page-header {
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--rule);
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.035em;
+}
+
+.affiliation {
+  margin: 0 0 16px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.intro { margin: 0; }
+
+section { margin: 22px 0 0; }
+
+h2 {
+  margin: 0 0 6px;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+p { margin: 0 0 10px; }
+
+ul {
+  margin: 4px 0 0;
+  padding-left: 1.4rem;
+}
+
+li { padding-left: 1px; margin: 2px 0; }
+
+#faculty-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.faculty-person {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin: 0;
+  padding: 14px 0;
+  border-bottom: 1px solid #ededed;
+}
+
+.faculty-person:first-child { padding-top: 4px; }
+.faculty-photo {
+  display: block;
+  flex: 0 0 88px;
+  width: 88px;
+  height: 100px;
+  object-fit: cover;
+  object-position: center top;
+  background: #f4f4f4;
+}
+
+.faculty-details { min-width: 0; padding-top: 2px; }
+.faculty-name { font-weight: 600; margin-bottom: 3px; }
+.faculty-links { font-size: 0.94rem; color: var(--muted); }
+
+a { color: var(--link); text-decoration: underline; text-underline-offset: 2px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+
+.item-detail { color: var(--muted); }
+.item-links { white-space: nowrap; }
+
+footer {
+  margin-top: 30px;
+  padding-top: 12px;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+footer p { margin: 0 0 4px; }
+
+@media (max-width: 520px) {
+  .page { width: calc(100% - 30px); margin: 22px 15px 24px; }
+  body { font-size: 15.5px; }
+  h2 { font-size: 1.18rem; }
+  .faculty-person { gap: 12px; }
+  .faculty-photo { flex-basis: 72px; width: 72px; height: 84px; }
+  .faculty-links { font-size: 0.9rem; }
+}
+
+@media print {
+  .page { width: 100%; margin: 0; }
+  a { color: inherit; }
+}
